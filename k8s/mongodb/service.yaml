@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongo-service
+spec:
+  selector:
+    app: mongodb
+  ports:
+    - port: 27017        # porta deste serviço
+      targetPort: 27017  # porta do Container
+  type: ClusterIP
